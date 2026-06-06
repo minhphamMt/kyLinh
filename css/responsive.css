@@ -1,0 +1,143 @@
+@media (max-width: 1024px) {
+  .hero-content,
+  .letter-layout,
+  .contact-layout,
+  .location-card {
+    grid-template-columns: 1fr;
+  }
+
+  .scrapbook-card,
+  .promise-card {
+    width: min(100%, 520px);
+  }
+
+  .ribbon-plan,
+  .wish-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ribbon-path {
+    top: 3rem;
+    right: 8%;
+    left: 8%;
+  }
+
+  .plan-step:nth-of-type(2),
+  .plan-step:nth-of-type(4) {
+    margin-top: 0;
+  }
+
+  .photo-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 3.3rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .float-sticker {
+    opacity: 0.48;
+  }
+
+  .s1 { left: -1rem; top: 13%; }
+  .s2 { right: -1rem; top: 10%; }
+  .s3 { left: -0.5rem; bottom: 12%; }
+  .s4 { right: 2rem; bottom: 8%; }
+
+  .ribbon-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .ribbon-path {
+    top: 0;
+    bottom: 0;
+    left: 1.5rem;
+    right: auto;
+    width: 0.7rem;
+    height: auto;
+  }
+
+  .plan-step {
+    min-height: auto;
+    padding: 1rem 1rem 1rem 4.3rem;
+  }
+
+  .step-dot {
+    top: 1rem;
+    left: 1.2rem;
+    transform: none;
+  }
+
+  .photo-line {
+    margin-inline: -1rem;
+    padding: 2.6rem 1rem 1.2rem;
+    overflow: hidden;
+  }
+
+  .photo-track {
+    display: flex;
+    width: max-content;
+    gap: 0.9rem;
+    will-change: transform;
+    animation: photoMarquee 28s linear infinite;
+  }
+
+  .photo-track:hover {
+    animation-play-state: paused;
+  }
+
+  .hanging-photo.duplicate {
+    display: block;
+  }
+
+  .photo-line::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hanging-photo {
+    flex: 0 0 min(64vw, 240px);
+  }
+
+  .scrapbook-card {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: min(100% - 1rem, var(--container));
+  }
+
+  .hero-meta {
+    display: grid;
+  }
+
+  .location-info li {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .location-info li b {
+    text-align: left;
+  }
+
+  .wish-wall {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container: 1180px;
+  }
+}

@@ -1,0 +1,25 @@
+:root {
+  --berry: #7d4d73;
+  --berry-dark: #4d2f4a;
+  --pink: #ff9ec7;
+  --pink-soft: #fff7fb;
+  --blush: #ffeaf3;
+  --lavender: #bba7ff;
+  --sun: #f8d66d;
+  --mint: #b8eadf;
+  --cream: #fff9ee;
+  --paper: #fffdf8;
+  --ink: #3a2737;
+  --muted: #8b6d82;
+  --line: rgba(125, 77, 115, 0.15);
+  --pink-line: rgba(255, 158, 199, 0.4);
+  --shadow-soft: 0 18px 48px rgba(125, 77, 115, 0.13);
+  --shadow-strong: 0 30px 90px rgba(125, 77, 115, 0.22);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 30px;
+  --container: 1120px;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-script: "Pacifico", cursive;
+  --font-body: "Nunito", Arial, sans-serif;
+}

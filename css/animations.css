@@ -1,0 +1,147 @@
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-up"] { transform: translateY(28px) scale(0.98); }
+[data-reveal="fade-down"] { transform: translateY(-18px); }
+[data-reveal="fade-left"] { transform: translateX(30px) rotate(1deg); }
+[data-reveal="fade-right"] { transform: translateX(-30px) rotate(-1deg); }
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal="quote"] span {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-reveal="quote"].is-visible span {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal="quote"].is-visible span:nth-child(2) {
+  transition-delay: 0.18s;
+}
+
+.float-sticker {
+  animation: stickerFloat 7s ease-in-out infinite;
+}
+
+.s2 { animation-delay: -1.4s; }
+.s3 { animation-delay: -2.2s; }
+.s4 { animation-delay: -3.1s; }
+
+.hero-sparkles span {
+  animation: sparklePop 2.8s ease-in-out infinite;
+}
+
+.hero-sparkles span:nth-child(2) { animation-delay: 0.5s; }
+.hero-sparkles span:nth-child(3) { animation-delay: 1s; }
+.hero-sparkles span:nth-child(4) { animation-delay: 1.5s; }
+
+.scrapbook-card {
+  animation: cardBreath 5.5s ease-in-out infinite;
+}
+
+.ribbon-path {
+  background-size: 72px 100%, 100% 100%;
+  animation: ribbonShine 6s linear infinite;
+}
+
+.pin {
+  animation: pinWiggle 3.8s ease-in-out infinite;
+}
+
+.hanging-photo:nth-of-type(3) .pin,
+.hanging-photo:nth-of-type(5) .pin {
+  animation-delay: -1.2s;
+}
+
+@keyframes stickerFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-6deg);
+  }
+
+  50% {
+    transform: translate3d(12px, -18px, 0) rotate(8deg);
+  }
+}
+
+@keyframes sparklePop {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.36;
+  }
+
+  50% {
+    transform: scale(1.45);
+    opacity: 1;
+  }
+}
+
+@keyframes cardBreath {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+@keyframes ribbonShine {
+  to {
+    background-position: 144px 0, 0 0;
+  }
+}
+
+@keyframes pinWiggle {
+  0%,
+  100% {
+    translate: -50% 0;
+  }
+
+  50% {
+    translate: -50% -3px;
+  }
+}
+
+@keyframes photoMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 0.45rem), 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [data-reveal],
+  [data-reveal="quote"] span {
+    opacity: 1;
+    transform: none;
+  }
+}
