@@ -6,10 +6,18 @@
   will-change: opacity, transform;
 }
 
-[data-reveal="fade-up"] { transform: translateY(28px) scale(0.98); }
-[data-reveal="fade-down"] { transform: translateY(-18px); }
-[data-reveal="fade-left"] { transform: translateX(30px) rotate(1deg); }
-[data-reveal="fade-right"] { transform: translateX(-30px) rotate(-1deg); }
+[data-reveal="fade-up"] {
+  transform: translateY(28px) scale(0.98);
+}
+[data-reveal="fade-down"] {
+  transform: translateY(-18px);
+}
+[data-reveal="fade-left"] {
+  transform: translateX(30px) rotate(1deg);
+}
+[data-reveal="fade-right"] {
+  transform: translateX(-30px) rotate(-1deg);
+}
 
 [data-reveal].is-visible {
   opacity: 1;
@@ -37,29 +45,71 @@
   animation: stickerFloat 7s ease-in-out infinite;
 }
 
-.s2 { animation-delay: -1.4s; }
-.s3 { animation-delay: -2.2s; }
-.s4 { animation-delay: -3.1s; }
+.s2 {
+  animation-delay: -1.4s;
+}
+.s3 {
+  animation-delay: -2.2s;
+}
+.s4 {
+  animation-delay: -3.1s;
+}
 
 .hero-sparkles span {
   animation: sparklePop 2.8s ease-in-out infinite;
 }
 
-.hero-sparkles span:nth-child(2) { animation-delay: 0.5s; }
-.hero-sparkles span:nth-child(3) { animation-delay: 1s; }
-.hero-sparkles span:nth-child(4) { animation-delay: 1.5s; }
+.hero-sparkles span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.hero-sparkles span:nth-child(3) {
+  animation-delay: 1s;
+}
+.hero-sparkles span:nth-child(4) {
+  animation-delay: 1.5s;
+}
 
 .scrapbook-card {
   animation: cardBreath 5.5s ease-in-out infinite;
 }
 
 .ribbon-path {
-  background-size: 72px 100%, 100% 100%;
+  background-size:
+    72px 100%,
+    100% 100%;
   animation: ribbonShine 6s linear infinite;
 }
 
 .pin {
   animation: pinWiggle 3.8s ease-in-out infinite;
+}
+
+.message-preview {
+  animation: messageFloat 4s ease-in-out infinite;
+}
+
+.ticket-stamp {
+  animation: stampPulse 3.2s ease-in-out infinite;
+}
+
+.contact-bow {
+  animation: bowNod 4.5s ease-in-out infinite;
+}
+
+.loader-card {
+  animation: loaderFloat 1.8s ease-in-out infinite;
+}
+
+.loader-dots i {
+  animation: loaderDot 0.9s ease-in-out infinite;
+}
+
+.loader-dots i:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.loader-dots i:nth-child(3) {
+  animation-delay: 0.24s;
 }
 
 .hanging-photo:nth-of-type(3) .pin,
@@ -104,7 +154,9 @@
 
 @keyframes ribbonShine {
   to {
-    background-position: 144px 0, 0 0;
+    background-position:
+      144px 0,
+      0 0;
   }
 }
 
@@ -116,6 +168,63 @@
 
   50% {
     translate: -50% -3px;
+  }
+}
+
+@keyframes messageFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(1deg);
+  }
+}
+
+@keyframes stampPulse {
+  0%,
+  100% {
+    transform: rotate(9deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(3deg) scale(1.06);
+  }
+}
+
+@keyframes bowNod {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(4deg) translateY(-4px);
+  }
+}
+
+@keyframes loaderFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(1deg);
+  }
+}
+
+@keyframes loaderDot {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1.15);
+    opacity: 1;
   }
 }
 

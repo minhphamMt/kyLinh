@@ -34,6 +34,12 @@
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .section {
     padding-block: 3.3rem;
   }
@@ -78,7 +84,9 @@
   }
 
   .photo-line {
-    margin-inline: -1rem;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
     padding: 2.6rem 1rem 1.2rem;
     overflow: hidden;
   }
@@ -87,12 +95,10 @@
     display: flex;
     width: max-content;
     gap: 0.9rem;
+    transform: translate3d(0, 0, 0);
     will-change: transform;
-    animation: photoMarquee 28s linear infinite;
-  }
-
-  .photo-track:hover {
-    animation-play-state: paused;
+    backface-visibility: hidden;
+    animation: photoMarquee 15s linear infinite;
   }
 
   .hanging-photo.duplicate {
@@ -104,11 +110,27 @@
   }
 
   .hanging-photo {
-    flex: 0 0 min(64vw, 240px);
+    flex: 0 0 min(58vw, 220px);
+    pointer-events: none;
   }
 
   .scrapbook-card {
     transform: rotate(0deg);
+  }
+
+  .contact-layout--playful {
+    gap: 1.4rem;
+  }
+
+  .contact-card {
+    width: 100%;
+    min-height: 280px;
+  }
+
+  .message-preview,
+  .contact-card .primary-button,
+  .contact-card small {
+    margin-left: 0.7rem;
   }
 }
 
@@ -132,6 +154,28 @@
 
   .wish-wall {
     grid-template-columns: 1fr;
+  }
+
+  .contact-shortcuts span {
+    font-size: 0.8rem;
+  }
+
+  .contact-card {
+    min-height: 270px;
+    padding-inline: 1rem;
+  }
+
+  .message-ticket::before {
+    left: 0.75rem;
+  }
+
+  .ticket-stamp {
+    right: 0.9rem;
+  }
+
+  .message-preview {
+    width: calc(100% - 0.7rem);
+    margin-top: 5rem;
   }
 
 }

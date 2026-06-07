@@ -25,6 +25,18 @@
   <body>
     <a class="skip-link" href="#main">Bỏ qua nội dung phụ</a>
 
+    <div class="page-loader" id="pageLoader" role="status" aria-live="polite">
+      <div class="loader-card">
+        <img src="../img/stickers/bow.svg" alt="" aria-hidden="true" />
+        <span>Đang mở lời mời xinh...</span>
+        <div class="loader-dots" aria-hidden="true">
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+      </div>
+    </div>
+
     <div class="sticker-field" aria-hidden="true">
       <img class="float-sticker s1" src="../img/stickers/flower.svg" alt="" />
       <img class="float-sticker s2" src="../img/stickers/bow.svg" alt="" />
@@ -266,29 +278,38 @@
       </section>
 
       <section class="contact-section section" id="contact">
-        <div class="container contact-layout">
+        <div class="container contact-layout contact-layout--playful">
           <div class="contact-copy" data-reveal="fade-right">
-            <p class="section-kicker">Liên hệ với Linh</p>
-            <h2>Muốn nhắn mình thì ghé Facebook nha</h2>
-            <p>
-              Nếu bạn muốn xác nhận tham dự, hỏi lịch chụp hoặc gửi một lời chúc
-              nhỏ xinh, cứ nhắn trực tiếp cho mình qua Facebook nhé.
-            </p>
+            <p class="section-kicker">Inbox nhỏ</p>
+            <h2>Chạm một cái là gặp Linh</h2>
+            <div class="contact-shortcuts" aria-label="Gợi ý nội dung nhắn">
+              <span>Đi được nè</span>
+              <span>Hỏi lịch chụp</span>
+              <span>Gửi ảnh xinh</span>
+            </div>
           </div>
 
-          <article class="contact-card" data-reveal="fade-left">
-            <img src="../img/stickers/bow.svg" alt="" aria-hidden="true" />
-            <span>Facebook</span>
-            <strong>Mình chờ tin nhắn của bạn nè</strong>
-            <p>Một chiếc inbox nhỏ thôi cũng làm ngày kỷ yếu vui hơn nhiều.</p>
+          <article class="contact-card message-ticket" data-reveal="fade-left">
+            <span class="ticket-stamp">FB</span>
+            <img
+              class="contact-bow"
+              src="../img/stickers/bow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="message-preview" aria-hidden="true">
+              <span>Linh</span>
+              <p>Hôm đó tới với mình nha?</p>
+            </div>
             <a
               class="primary-button"
               href="https://www.facebook.com/mytam.nguyen.54772?locale=vi_VN"
               target="_blank"
               rel="noreferrer"
             >
-              Nhắn Linh trên Facebook
+              Nhắn Linh
             </a>
+            <small>Facebook • My Tam Nguyen</small>
           </article>
         </div>
       </section>
@@ -297,12 +318,7 @@
         <div class="container">
           <p class="section-kicker" data-reveal="fade-up">Sổ lưu bút</p>
           <h2 data-reveal="fade-up">Những lời chúc xinh xinh</h2>
-          <div
-            class="wish-wall"
-            id="wishWall"
-            data-reveal="fade-up"
-            aria-live="polite"
-          >
+          <div class="wish-wall" data-reveal="fade-up">
             <article class="wish-card">
               <span>Sẽ đến nè</span>
               <strong>Minh Phạm</strong>
@@ -341,7 +357,6 @@
 
     <script src="../js/scrollReveal.js"></script>
     <script src="../js/tilt.js"></script>
-    <script src="../js/animations.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
