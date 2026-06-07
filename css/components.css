@@ -195,6 +195,18 @@
   border-radius: var(--radius-lg);
   transform: rotate(2deg);
   transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card.is-tilting {
+  animation: none;
+  transition: none;
+}
+
+.tilt-card.is-resetting {
+  transition:
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
 }
 
 .portrait {

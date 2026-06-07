@@ -67,20 +67,3 @@ p {
   outline: 3px solid var(--lavender);
   outline-offset: 4px;
 }
-
-.skip-link {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 100;
-  padding: 0.7rem 1rem;
-  border-radius: var(--radius-sm);
-  color: #fff;
-  background: var(--berry);
-  transform: translateY(-150%);
-  transition: transform 0.2s ease;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}

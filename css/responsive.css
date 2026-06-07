@@ -89,6 +89,7 @@
     margin-inline: 0;
     padding: 2.6rem 1rem 1.2rem;
     overflow: hidden;
+    contain: paint;
   }
 
   .photo-track {
@@ -98,7 +99,7 @@
     transform: translate3d(0, 0, 0);
     will-change: transform;
     backface-visibility: hidden;
-    animation: photoMarquee 15s linear infinite;
+    animation: photoMarquee 24s linear infinite;
   }
 
   .hanging-photo.duplicate {
@@ -112,10 +113,19 @@
   .hanging-photo {
     flex: 0 0 min(58vw, 220px);
     pointer-events: none;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .scrapbook-card {
     transform: rotate(0deg);
+    pointer-events: none;
+    will-change: auto;
+  }
+
+  .tilt-card {
+    animation: none;
+    transition: none;
   }
 
   .contact-layout--playful {
