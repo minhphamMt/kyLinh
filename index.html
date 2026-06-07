@@ -3,12 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Một Ngày Thật Xinh Ở DAV</title>
+    <title>M&#7897;t Ng&#224;y Th&#7853;t Xinh &#7902; DAV</title>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <meta http-equiv="refresh" content="0; url=html/index.html" />
     <link rel="canonical" href="html/index.html" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        color: #4d2f4a;
+        font-family: Arial, sans-serif;
+        background:
+          radial-gradient(
+            circle at 28% 24%,
+            rgba(255, 158, 199, 0.34),
+            transparent 16rem
+          ),
+          radial-gradient(
+            circle at 76% 72%,
+            rgba(187, 167, 255, 0.26),
+            transparent 18rem
+          ),
+          linear-gradient(180deg, #fffafd, #fff4fa);
+      }
+
+      .redirect-card {
+        width: min(100% - 2rem, 320px);
+        padding: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        border-radius: 24px;
+        background: rgba(255, 253, 248, 0.9);
+        box-shadow: 0 24px 70px rgba(125, 77, 115, 0.18);
+        text-align: center;
+      }
+
+      .redirect-card span {
+        display: inline-grid;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-bottom: 0.8rem;
+        border-radius: 50%;
+        place-items: center;
+        background: #fff4fa;
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      a {
+        color: #7d4d73;
+      }
+    </style>
   </head>
   <body>
-    <p>Đang chuyển đến <a href="html/index.html">DAV</a>...</p>
+    <main class="redirect-card">
+      <span aria-hidden="true">&#10047;</span>
+      <p>
+        &#272;ang m&#7903; l&#7901;i m&#7901;i xinh &#7903;
+        <a href="html/index.html">DAV</a>...
+      </p>
+    </main>
   </body>
 </html>
