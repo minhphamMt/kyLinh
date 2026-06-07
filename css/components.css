@@ -388,6 +388,10 @@
   gap: clamp(0.7rem, 1.6vw, 1rem);
 }
 
+.photo-set {
+  display: contents;
+}
+
 .clothesline {
   position: absolute;
   top: 1.2rem;
